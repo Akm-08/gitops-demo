@@ -1,4 +1,4 @@
-version: "3.8"
+
 
 services:
 
@@ -21,3 +21,4 @@ services:
     command: --interval 30
     environment:
       - WATCHTOWER_CLEANUP=true
+      - DOCKER_API_VERSION=1.44
