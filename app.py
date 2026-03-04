@@ -5,7 +5,7 @@ import os
 app = Flask(__name__)
 r = redis.Redis(host=os.getenv("REDIS_HOST", "redis"), port=6379)
 
-VERSION = "1.0"
+VERSION = "2.0"
 
 @app.route("/")
 def index():
