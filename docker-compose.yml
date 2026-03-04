@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+
+  app:
+    image: YOUR_DOCKERHUB_USERNAME/gitops-demo:latest
+    ports:
+      - "5000:5000"
+    environment:
+      - REDIS_HOST=redis
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:alpine
+
+  watchtower:
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --interval 30
+    environment:
+      - WATCHTOWER_CLEANUP=true
