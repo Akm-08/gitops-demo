@@ -3,7 +3,7 @@ version: "3.8"
 services:
 
   app:
-    image: YOUR_DOCKERHUB_USERNAME/gitops-demo:latest
+    image: akram2205/gitops-demo:latest
     ports:
       - "5000:5000"
     environment:

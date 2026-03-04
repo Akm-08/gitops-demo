@@ -1,4 +1,4 @@
-IMAGE=YOUR_DOCKERHUB_USERNAME/gitops-demo
+IMAGE=akram2205/gitops-demo
 
 build:
 	docker build -t $(IMAGE):latest .
